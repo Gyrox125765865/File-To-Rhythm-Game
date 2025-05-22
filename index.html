@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rhythm Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="bg-visual"></div>
+    <h1>Rhythm Game</h1>
+    <input type="file" id="audioInput" accept="audio/mp3,audio/mpeg" />
+    <audio id="audioPlayer" controls style="display:none"></audio>
+    <div id="loadingBar" style="display:none; margin:10px auto; width:300px; height:24px; background:#444; border-radius:12px; overflow:hidden;">
+        <div id="loadingFill" style="width:0; height:100%; background:#0af; transition:width 0.2s;"></div>
+    </div>
+    <select id="difficulty" style="margin:10px;">
+        <option value="normal">Normal</option>
+        <option value="medium">Medium</option>
+        <option value="hard" selected>Hard</option>
+    </select>
+    <button id="startBtn">Start Game</button>
+    <div id="combo"></div>
+    <div id="gameArea">
+        <div id="score">Score: 0</div>
+        <div id="targetArrows">
+            <div class="arrow left"></div>
+            <div class="arrow down"></div>
+            <div class="arrow up"></div>
+             <div class="arrow right"></div>
+        </div>
+    </div>
+    <div id="results"></div>
+    <script src="main.js"></script>
+</body>
+</html>
